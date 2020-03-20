@@ -23,6 +23,6 @@ jobs:
     - name: Build & Push Image
       run: |
         cd ./python
-        echo "${{ secrets.fluxdemo }}" | docker login -u "Vishnu4772" --password-stdin
+        echo "${{ secrets.fluxdemo }}" | docker login -u "vishnu4772" --password-stdin
         docker image build -t vishnu4772/demo-gitops:hellov1.0 .
         docker push vishnu4772/demo-gitops:hellov1.0
